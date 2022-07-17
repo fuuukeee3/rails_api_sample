@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+(1..2).each do |i|
+  User.create!(
+    access_token: "token#{i}",
+    api_rate_limit: i * 10
+  )
+end
