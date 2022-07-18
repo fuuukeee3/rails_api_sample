@@ -10,4 +10,10 @@
     access_token: "token#{i}",
     api_rate_limit: i * 10
   )
+
+  RequestCounter.create!(
+    access_token: "token#{i}",
+    count: 0,
+    start_at: Time.zone.now
+  )
 end
